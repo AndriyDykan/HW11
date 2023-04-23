@@ -207,9 +207,14 @@ def normilize(data: str):
     return undefinde_command, None
 
 
-while True:
-    user_input = input(">>>")
-    command, data = normilize(user_input)
-    print(command(data))
-    if command == to_exit and not data:
-        break
+def main():
+    while True:
+        user_input = input(">>>")
+        command, data = normilize(user_input)
+        print(command(data))
+        if command == to_exit and not data:
+            break
+
+
+if __name__ == "__main__":
+    main()
